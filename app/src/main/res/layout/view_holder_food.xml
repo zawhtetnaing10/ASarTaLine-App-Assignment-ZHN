@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_medium_2">
+
+    <FrameLayout
+        android:layout_width="@dimen/rating_label_width"
+        android:layout_height="@dimen/rating_label_height"
+        android:layout_gravity="right|top"
+        android:elevation="@dimen/margin_medium_3">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/shape_ellipse" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="45"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/food_card_height"
+        android:layout_margin="@dimen/margin_medium"
+        app:cardCornerRadius="@dimen/margin_medium"
+        app:cardElevation="@dimen/margin_small">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="5">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pizza" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:paddingLeft="@dimen/margin_medium_3"
+                android:paddingRight="@dimen/margin_medium">
+
+                <TextView
+                    android:id="@+id/tv_food_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="Casa Pop"
+                    android:textSize="@dimen/text_regular_3x"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_food_taste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_food_name"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="Cafe Italian Chinese"
+                    android:textSize="@dimen/text_regular" />
+
+                <TextView
+                    android:id="@+id/tv_food_suited_for"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_food_taste"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="Cost 300$ for one"
+                    android:textSize="@dimen/text_regular" />
+
+                <TextView
+                    android:id="@+id/tv_view_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:text="View Details"
+                    android:textColor="@color/main_theme_color"
+                    android:textSize="@dimen/text_regular" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RatingBar
+            style="@style/Base.Widget.AppCompat.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/margin_rating"
+            android:numStars="5"
+            android:progressTint="@color/main_theme_color"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:stepSize="1" />
+
+
+    </android.support.v7.widget.CardView>
+
+
+</FrameLayout>

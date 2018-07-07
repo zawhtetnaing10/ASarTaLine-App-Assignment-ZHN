@@ -3,8 +3,13 @@ package com.zawhtetnaing.asartaline.zhn.viewholders;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-public class BaseViewHolder extends RecyclerView.ViewHolder {
+import com.zawhtetnaing.asartaline.zhn.data.vos.WarDeeVO;
+
+public abstract class BaseViewHolder extends RecyclerView.ViewHolder {
+
     public BaseViewHolder(View itemView) {
         super(itemView);
     }
+
+    public abstract void bindData(WarDeeVO warDee);
 }

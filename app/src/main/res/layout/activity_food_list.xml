@@ -112,7 +112,8 @@
                     android:id="@+id/et_search_restaurants"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:background="@android:color/transparent"
                     android:drawableRight="@drawable/ic_search_black_24dp"
                     android:hint="Search Restaurants"
                     android:textSize="@dimen/text_regular" />
@@ -234,12 +235,33 @@
 
         </LinearLayout>
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_food_list"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/ll_food_category"
-            android:layout_marginTop="@dimen/margin_medium_3" />
+            android:layout_marginTop="@dimen/margin_medium_3">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_food_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+            <include
+                android:id="@+id/vp_empty"
+                layout="@layout/view_pod_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+        </FrameLayout>
 
     </RelativeLayout>
 

@@ -5,4 +5,5 @@
     <color name="colorAccent">#FFFFFF</color>
 
     <color name="main_theme_color">#FF8E21</color>
+    <color name="divider">#BDBDBD</color>
 </resources>

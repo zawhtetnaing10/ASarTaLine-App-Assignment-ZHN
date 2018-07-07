@@ -34,15 +34,19 @@
     <dimen name="text_big_3x">80sp</dimen>
 
     <!--App specific-->
-    <dimen name="collapsing_toolbar_height">250dp</dimen>
+    <dimen name="collapsing_toolbar_height">300dp</dimen>
     <dimen name="margin_xxxlarge">56dp</dimen>
 
     <dimen name="search_restaurant_et_height">55dp</dimen>
     <dimen name="location_image_width">24dp</dimen>
     <dimen name="location_image_height">24dp</dimen>
     <dimen name="food_icon_size">48dp</dimen>
-    <dimen name="food_card_height">150dp</dimen>
+    <dimen name="food_card_height">130dp</dimen>
     <dimen name="rating_label_width">32dp</dimen>
     <dimen name="rating_label_height">40dp</dimen>
     <dimen name="margin_rating">120dp</dimen>
+    <dimen name="ellipse_food_details_width">100dp</dimen>
+    <dimen name="ellipse_food_details_height">70dp</dimen>
+    <dimen name="food_name_width">150dp</dimen>
+    <dimen name="empty_image_size">80dp</dimen>
 </resources>

@@ -58,10 +58,10 @@ public class FoodDetailsActivity extends AppCompatActivity {
 
         String warDeeIdExtra = getIntent().getStringExtra(FoodConstants.WARDEE_ID_EXTRA);
         mFoodItem = FoodModel.getObjInstance().getWarDeeById(warDeeIdExtra);
-        if(mFoodItem == null){
+        if (mFoodItem == null) {
             coordinatorLayout.setVisibility(View.GONE);
             vpEmpty.setVisibility(View.VISIBLE);
-        }else{
+        } else {
             bindData(mFoodItem);
             vpEmpty.setVisibility(View.GONE);
         }
@@ -74,7 +74,8 @@ public class FoodDetailsActivity extends AppCompatActivity {
                 .into(ivFoodDetailsBackDrop);
 
         tvFoodDetailsFoodName.setText(foodItem.getName());
-        tvfoodDetailsPrice.setText(foodItem.getAveragePrice() + " MMK");
+
+        tvfoodDetailsPrice.setText(foodItem.getPriceRangeMin() + " - " + foodItem.getPriceRangeMax());
 
         tvFoodTasteDescription.setText(foodItem.getGeneralTaste()
                 .get(0)

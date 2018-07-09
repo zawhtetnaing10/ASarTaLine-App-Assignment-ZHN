@@ -115,7 +115,9 @@
                     android:layout_marginTop="@dimen/margin_medium_2"
                     android:background="@android:color/transparent"
                     android:drawableRight="@drawable/ic_search_black_24dp"
+                    android:editable="false"
                     android:hint="Search Restaurants"
+                    android:paddingRight="@dimen/margin_medium_2"
                     android:textSize="@dimen/text_regular" />
 
             </FrameLayout>
